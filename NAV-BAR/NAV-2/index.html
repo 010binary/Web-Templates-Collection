@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Nav2</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <label class="logo">LOGO</label>
+        <ul class="display">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+        <div class="toggle-container" onclick="clicked()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </nav>
+    </header>
+    <script>
+      const ul = document.querySelector("ul");
+      const toggler = document.querySelector(".toggle-container");
+
+      function clicked() {
+        if (ul.className === "display") {
+          ul.classList.remove("display")
+          toggler.className += " close"
+        } else {
+          ul.className = "display"
+          toggler.classList.remove("close");
+        }
+      };
+    </script>
+  </body>
+</html>

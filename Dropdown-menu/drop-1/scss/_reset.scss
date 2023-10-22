@@ -1,0 +1,17 @@
+$background-color:#c2b8b8;
+$text-color:#777;
+$text-hover:#000;
+$font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: $font-family;
+}
+
+
+@mixin flex ($direction){
+    display: flex;
+    align-items: baseline;
+    flex-direction: $direction;
+}

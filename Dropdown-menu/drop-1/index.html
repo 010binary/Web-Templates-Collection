@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <title>Drop down menu</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="dropdown" data-dropdown>
+        <button class="drop-1" data-dropdown-button>information</button>
+        <div class="dropdown-menu">
+          <div class="contentDivs">
+            <div>
+              <div class="dropdown-heading">heading 1</div>
+              <div class="dropdown-links">
+                <a href="#" class="links">All</a>
+                <a href="#" class="links">Latest</a>
+                <a href="#" class="links">Popular</a>
+              </div>
+            </div>
+            <div>
+              <div class="dropdown-heading">heading 2</div>
+              <div class="dropdown-links">
+                <a href="#" class="links">JavaScript</a>
+                <a href="#" class="links">CSS</a
+                ><a href="#" class="links">React</a>
+              </div>
+            </div>
+            <div>
+              <div class="dropdown-heading">heading 3</div>
+              <div class="dropdown-links">
+                <a href="#" class="links">All</a>
+                <a href="#" class="links">Latest</a
+                ><a href="#" class="links">Popular</a>
+              </div>
+            </div>
+            <div>
+              <div class="dropdown-heading">heading 4</div>
+              <div class="dropdown-links">
+                <a href="#" class="links">Twitter</a>
+                <a href="#" class="links">Newsletter</a
+                ><a href="#" class="links">Discord</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <a href="#" class="drop-2">pricing</a>
+      <div class="dropdown" data-dropdown>
+        <button class="drop-3" data-dropdown-button>login</button>
+        <div class="dropdown-menu">
+           <form class="form">
+            <label for="email">Email</label>
+            <input type="email" id="email">
+            <label for="password">Password</label>
+            <input type="password" id="password">
+            <button type="submit">Login</button> 
+           </form>
+        </div>
+      </div>
+    </header>
+    <script defer>
+      document.addEventListener("click", (e) => {
+        const isDropdownButton = e.target.matches("[data-dropdown-button]");
+        if (!isDropdownButton && e.target.closest("[data-dropdown]") != null)
+          return;
+
+        let currentDropdown;
+        if (isDropdownButton) {
+          currentDropdown = e.target.closest("[data-dropdown]");
+          currentDropdown.classList.toggle("active");
+        }
+        document
+          .querySelectorAll("[data-dropdown].active")
+          .forEach((dropdown) => {
+            if (dropdown === currentDropdown) return;
+            dropdown.classList.remove("active");
+          });
+      });
+    </script>
+  </body>
+</html>

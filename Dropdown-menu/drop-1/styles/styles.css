@@ -1,0 +1,124 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  background-color: #c2b8b8;
+  padding: .8rem;
+  gap: 1rem;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown .dropdown-menu {
+  position: absolute;
+  left: 0;
+  top: calc(100% + .25rem);
+  background-color: white;
+  padding: .8rem;
+  border-radius: .25rem;
+  -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
+          box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
+  -webkit-transition: opacity 150ms ease-in-out, -webkit-transform 150ms ease-in-out;
+  transition: opacity 150ms ease-in-out, -webkit-transform 150ms ease-in-out;
+  transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
+  transition: opacity 150ms ease-in-out, transform 150ms ease-in-out, -webkit-transform 150ms ease-in-out;
+}
+
+.dropdown.active > .dropdown-menu {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  pointer-events: auto;
+}
+
+.dropdown.active > .drop-1,
+.dropdown .drop-1:hover {
+  color: #000;
+}
+
+.drop-3,
+.drop-2,
+.drop-1 {
+  background: none;
+  border: none;
+  text-decoration: none;
+  color: #777;
+  font-family: inherit;
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 0;
+  text-transform: uppercase;
+}
+
+.drop-2:hover,
+.drop-3:hover {
+  color: #000;
+}
+
+.contentDivs {
+  display: -ms-grid;
+  display: grid;
+  grid: 1fr 1fr / 1fr 1fr;
+  gap: 10px;
+  width: 100%;
+}
+
+.dropdown-heading {
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: -0.077em;
+  width: 100px;
+}
+
+.dropdown-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: .25rem;
+}
+
+.dropdown-links .links {
+  text-decoration: none;
+  color: #777;
+}
+
+.dropdown-links .links:hover {
+  color: #000;
+}
+
+.form input {
+  margin: 0px 0px 10px 0px;
+  height: 25px;
+  border-radius: 5px;
+}
+
+.form button {
+  padding: 10px 20px;
+  margin: 0 50%;
+  background: -webkit-gradient(linear, left top, left bottom, from(yellow), color-stop(blue), to(#c2b8b8));
+  background: linear-gradient(yellow, blue, #c2b8b8);
+}
+/*# sourceMappingURL=styles.css.map */

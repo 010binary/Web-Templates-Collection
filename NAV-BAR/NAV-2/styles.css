@@ -1,0 +1,108 @@
+:root{
+    --bg-clr:blue;
+    --dfont:1.5rem;
+    --clr:white;
+}
+*{
+    margin: 0;
+}
+header{
+    background-color: var(--bg-clr);
+    color: var(--clr);
+    font-size: var(--dfont);
+    width: 100%;
+    position: fixed;
+    z-index: 999;
+    height: 5rem;
+}
+nav {
+    width: 100%;
+    padding-top: 20px;
+}
+nav .logo{
+    font-size: 2rem;
+    font-weight: 700;
+    padding-left: 0.9em;
+    width: 30%;
+}
+nav ul {
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 70%;
+    position: absolute;
+    right: 0;
+}
+nav ul li {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    width: 150px;
+    transition: background-color 100ms , text-decoration 2s;
+}
+nav ul li a {
+    color: var(--clr);
+    text-decoration: none;
+    padding: 5px;
+    text-transform: uppercase;
+}
+ul :nth-child(4){
+    margin-right: 10px;
+}
+nav ul li:hover{
+    background-color: rgb(83, 83, 232);
+    border-radius: 5px;
+    text-decoration: underline 1.5px black;
+}
+@media screen and (max-width: 600px) {
+    .display{
+        display: none;
+    }
+    nav .logo{
+        width: 100%;
+        display: block;
+    }
+    nav ul li a {
+        width: 100%;
+        padding: 0;
+    }
+    nav ul {
+        display: block;
+        background-color: var(--bg-clr);
+        list-style: none;
+        text-align: center;
+        width: 100%;
+    }
+    nav ul li{
+        border-bottom: 2px solid black;
+        width: 100%;
+        padding: 1rem;
+    }
+    nav ul li:hover{
+        background-color: rgb(83, 83, 232);
+        
+    }
+    .toggle-container{
+        height: 40px;
+        width: 40px;
+        padding: 1em 0;
+        position: absolute;
+        top: 0;
+        right: 20px;
+        cursor: pointer;
+    }
+
+    .toggle-container span{
+        width: 100%;
+        background-color: var(--clr);
+        padding: 3px;
+        display: flex;
+        flex-direction: column;
+        margin: 5px;
+        border-radius: 10px;
+    }
+
+    .close {
+        transform: rotate(90deg);
+    }
+}
