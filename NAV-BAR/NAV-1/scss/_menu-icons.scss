@@ -1,5 +1,5 @@
 .burger-menu {
-    display: none;
+    opacity: 0;
     width: 80px;
     cursor: pointer;
     height: 60px;
@@ -7,6 +7,7 @@
     position: fixed;
     top: 14px;
     right: 0;
+    pointer-events: none;
 
     & span {
         display: block;
@@ -20,7 +21,6 @@
 
 .cancel-menu {
     @extend .burger-menu;
-    display: none;
 
     & .left,
     & .right {
@@ -42,4 +42,6 @@
 
 .active {
     display: block;
+    pointer-events: auto;
+    opacity: 1;
 }
