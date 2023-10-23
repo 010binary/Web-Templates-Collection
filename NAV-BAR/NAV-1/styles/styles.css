@@ -1,0 +1,131 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #666464;
+  overflow: hidden;
+}
+
+.burger-menu, .cancel-menu {
+  display: none;
+  width: 80px;
+  cursor: pointer;
+  height: 60px;
+  z-index: 100;
+  position: fixed;
+  top: 14px;
+  right: 0;
+}
+
+.burger-menu span, .cancel-menu span {
+  display: block;
+  background-color: #efeded;
+  width: 60%;
+  height: 6px;
+  margin: 8px auto;
+  border-radius: 10px;
+}
+
+.cancel-menu {
+  display: none;
+}
+
+.cancel-menu .left,
+.cancel-menu .right {
+  background-color: red;
+}
+
+.cancel-menu .left {
+  position: relative;
+  top: 12px;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.cancel-menu .right {
+  position: relative;
+  top: 0px;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.active {
+  display: block;
+}
+
+nav {
+  background-color: #0082e6;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  width: 100vw;
+}
+
+nav .logo {
+  color: white;
+  font-size: 2.188rem;
+  line-height: 2.285em;
+  font-weight: bold;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+nav ul {
+  display: none;
+  width: 100vw;
+  background-color: #0082e6;
+}
+
+nav ul > :nth-child(1) {
+  border-top: 1px solid black;
+}
+
+nav ul li {
+  height: 70px;
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-bottom: 1px solid black;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #191717;
+  font-size: 1.3rem;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+nav ul li a:hover {
+  background-color: #1b9bff;
+}
+/*# sourceMappingURL=styles.css.map */

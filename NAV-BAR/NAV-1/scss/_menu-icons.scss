@@ -1,0 +1,45 @@
+.burger-menu {
+    display: none;
+    width: 80px;
+    cursor: pointer;
+    height: 60px;
+    z-index: 100;
+    position: fixed;
+    top: 14px;
+    right: 0;
+
+    & span {
+        display: block;
+        background-color: $white;
+        width: 60%;
+        height: 6px;
+        margin: 8px auto;
+        border-radius: 10px;
+    }
+}
+
+.cancel-menu {
+    @extend .burger-menu;
+    display: none;
+
+    & .left,
+    & .right {
+        background-color: red;
+    }
+
+    & .left {
+        position: relative;
+        top: 12px;
+        transform: rotate(-45deg);
+    }
+
+    & .right {
+        position: relative;
+        top: 0px;
+        transform: rotate(45deg);
+    }
+}
+
+.active {
+    display: block;
+}
