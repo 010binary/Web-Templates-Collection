@@ -1,0 +1,15 @@
+$background-color:blue;
+$font-size:1.5rem;
+$color:white;
+$font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+$moblie-value:600px;
+
+*{
+    margin: 0;
+    font-family: $font-family;
+}
+@mixin mobile {
+    @media (max-width: $moblie-value) {
+        @content;
+    }
+}

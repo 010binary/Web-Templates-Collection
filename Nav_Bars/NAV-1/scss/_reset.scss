@@ -1,0 +1,32 @@
+$main-blue: #0082e6;
+$active: #1b9bff;
+$white: rgb(239, 237, 237);
+$text-color: rgb(25, 23, 23);
+$body-color: rgb(102, 100, 100);
+$font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+$moblie-value: 650px;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $font-family;
+}
+
+body {
+    background-color: $body-color;
+    overflow: hidden;
+}
+
+@mixin flex($direction, $alignment, $justifment) {
+    display: flex;
+    flex-direction: $direction;
+    align-items: $alignment;
+    justify-content: $justifment;
+}
+
+@mixin mobile {
+    @media (max-width: $moblie-value) {
+        @content;
+    }
+}

@@ -1,0 +1,115 @@
+@import "./reset";
+
+header {
+    background-color: $background-color;
+    color: $color;
+    font-size: $font-size;
+    width: 100%;
+    position: fixed;
+    height: 5rem;
+
+    nav {
+        width: 100%;
+        padding-top: 20px;
+
+        .logo {
+            font-size: 2rem;
+            font-weight: 700;
+            padding-left: 0.9em;
+            width: 30%;
+
+            @include mobile {
+                width: 100%;
+                display: block;
+            }
+        }
+
+        ul {
+            display: inline-flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            width: 70%;
+            position: absolute;
+            right: 0;
+
+            @include mobile {
+                display: block;
+                background-color: $background-color;
+                list-style: none;
+                text-align: center;
+                width: 100%;
+            }
+
+            :nth-child(4) {
+                margin-right: 10px;
+            }
+
+            li {
+                display: flex;
+                justify-content: space-around;
+                list-style: none;
+                width: 150px;
+                transition: background-color 100ms, text-decoration 2s;
+
+                @include mobile {
+                    border-bottom: 2px solid black;
+                    width: 100%;
+                    padding: 1rem;
+                    :hover{
+                        background-color: rgb(83, 83, 232);
+                        
+                    }
+                }
+
+                a {
+                    color: $color;
+                    text-decoration: none;
+                    padding: 5px;
+                    text-transform: uppercase;
+
+                    @include mobile {
+                        width: 100%;
+                        padding: 0;
+                    }
+                }
+                :hover {
+                    background-color: rgb(83, 83, 232);
+                    border-radius: 5px;
+                    text-decoration: underline 1.5px black;
+                }
+            }
+        }
+
+    }
+
+}
+
+@include mobile {
+    .display {
+        display: none;
+    }
+    .toggle-container{
+        height: 40px;
+        width: 40px;
+        padding: 1em 0;
+        position: absolute;
+        background-color: black;
+        top: 0;
+        right: 20px;
+        cursor: pointer;
+        display: block;
+
+        span{
+            width: 100%;
+            background-color: black;
+            padding: 3px;
+            display: flex;
+            flex-direction: column;
+            margin: 5px;
+            border-radius: 10px;
+        }
+    }
+    .close {
+        transform: rotate(90deg);
+    }
+}

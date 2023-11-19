@@ -1,0 +1,93 @@
+* {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header {
+  background-color: blue;
+  color: white;
+  font-size: 1.5rem;
+  width: 100%;
+  position: fixed;
+  z-index: 999;
+  height: 5rem;
+}
+header nav {
+  width: 100%;
+  padding-top: 20px;
+}
+header nav .logo {
+  font-size: 2rem;
+  font-weight: 700;
+  padding-left: 0.9em;
+  width: 30%;
+}
+@media (max-width: 600px) {
+  header nav .logo {
+    width: 100%;
+    display: block;
+  }
+}
+header nav ul {
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 70%;
+  position: absolute;
+  right: 0;
+}
+@media (max-width: 600px) {
+  header nav ul {
+    display: block;
+    background-color: var(--bg-clr);
+    list-style: none;
+    text-align: center;
+    width: 100%;
+  }
+}
+header nav ul :nth-child(4) {
+  margin-right: 10px;
+}
+header nav ul li {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  width: 150px;
+  transition: background-color 100ms, -webkit-text-decoration 2s;
+  transition: background-color 100ms, text-decoration 2s;
+  transition: background-color 100ms, text-decoration 2s, -webkit-text-decoration 2s;
+}
+@media (max-width: 600px) {
+  header nav ul li {
+    border-bottom: 2px solid black;
+    width: 100%;
+    padding: 1rem;
+  }
+  header nav ul li :hover {
+    background-color: rgb(83, 83, 232);
+  }
+}
+header nav ul li a {
+  color: var(--clr);
+  text-decoration: none;
+  padding: 5px;
+  text-transform: uppercase;
+}
+@media (max-width: 600px) {
+  header nav ul li a {
+    width: 100%;
+    padding: 0;
+  }
+}
+header nav ul li :hover {
+  background-color: rgb(83, 83, 232);
+  border-radius: 5px;
+  -webkit-text-decoration: underline 1.5px black;
+          text-decoration: underline 1.5px black;
+}
+
+@media (max-width: 600px) {
+  .display {
+    display: none;
+  }
+}/*# sourceMappingURL=styles.css.map */
