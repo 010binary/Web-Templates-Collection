@@ -60,5 +60,3 @@ Please ensure that any added templates come with appropriate documentation and a
 Happy coding!
 
 ```
-
-```
