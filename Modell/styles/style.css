@@ -1,0 +1,87 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: url(../img/picture.jpg) no-repeat center center/cover;
+  height: 100vh;
+  overflow-y: hidden;
+  position: relative;
+  color: aliceblue;
+}
+
+#open-btn {
+  position: absolute;
+  bottom: 6vh;
+  left: 65px;
+  background-color: transparent;
+  color: rgb(252, 252, 252);
+  border: 3px solid aliceblue;
+  border-radius: 10px;
+  box-shadow: 0 0 15px aliceblue;
+  transition: 0.9s;
+  padding: 0;
+}
+#open-btn p {
+  text-transform: capitalize;
+  font-weight: 600;
+  font-size: 20px;
+  width: 100%;
+  height: 100%;
+  letter-spacing: 1.4px;
+  margin: 0;
+  padding: 25px 1px;
+}
+#open-btn :hover {
+  background-color: aliceblue;
+  color: black;
+}
+
+#modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  display: none;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+#modal-container #modal {
+  background-color: aliceblue;
+  color: #000;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 200px;
+  height: 80px;
+  padding: 20px;
+  border-radius: 10px;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  animation-name: animateModal;
+  animation-duration: 0.5s;
+}
+#modal-container #modal #close-btn {
+  font-size: 3rem;
+  cursor: pointer;
+  color: red;
+  padding-bottom: 10px;
+}
+
+/* ANIMATION */
+@keyframes animateModal {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 50%;
+    opacity: 1;
+  }
+}/*# sourceMappingURL=style.css.map */
